@@ -8,15 +8,15 @@ export default defineConfig({
     minify: true,
     rollupOptions: {
       // https://rollupjs.org/configuration-options/
-      external: [
-        "react",
-        "axios",
-        "react-dom",
-        "react-i18next",
-        "i18next",
-        "antd",
-        "zustand",
-      ],
+      // external: [
+      //   "react",
+      //   "axios",
+      //   "react-dom",
+      //   "react-i18next",
+      //   "i18next",
+      //   "antd",
+      //   "zustand",
+      // ],
     },
   },
 });
