@@ -1,0 +1,24 @@
+version: '3.7'
+services:
+  app:
+    build:
+      context: ..
+      dockerfile: app-products/Dockerfile
+    image: app-products
+    restart: unless-stopped
+    container_name: app-products
+    ports:
+      - 9090:9090
+    environment:
+      - TZ=America/Sao_Paulo
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.app-products.entrypoints=web"
+      - "traefik.http.routers.app-products.rule=Host(`jhon-test-app-products.jhonerick.me`)"
+      - "traefik.http.routers.app-products.service=app-products"
+      - "traefik.http.services.app-products.loadbalancer.server.port=9090"
+    networks:
+      - traefikProxyNet
+networks:
+  traefikProxyNet:
+    external: true
