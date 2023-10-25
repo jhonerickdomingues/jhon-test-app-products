@@ -12,8 +12,8 @@ dependencies:
     specifier: ^0.0.0
     version: 0.0.0
   jhon-test-utils:
-    specifier: ^0.0.0
-    version: 0.0.0
+    specifier: ^0.0.1
+    version: 0.0.1
   react:
     specifier: ^18.2.0
     version: 18.2.0
@@ -1645,8 +1645,8 @@ packages:
       - moment
     dev: false
 
-  /jhon-test-utils@0.0.0:
-    resolution: {integrity: sha512-S1zwAXHq8FgjyL8p/qPupAVQCNA07Sfc1XNx0idEhi5IyzO7gCleRzYy1pRFfxu0EYVZUFGelXbwI4pgEPhACg==}
+  /jhon-test-utils@0.0.1:
+    resolution: {integrity: sha512-dIaqe2mAJUrQ7dAd7cSMT9zLdTYW9J3cbOXncmUhp+HJMBncd1hUefYo1fbzDhpiboo0TXtKTanBOutZxlHo3g==}
     dependencies:
       axios: 1.5.1
       i18next: 23.6.0
