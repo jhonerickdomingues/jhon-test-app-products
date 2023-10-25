@@ -40,7 +40,7 @@ function App() {
   ];
 
   const { products, loading, getProducts } = useProductsStore();
-  const [search, setSearch] = useState(null);
+  const [search] = useState(null);
 
   useEffect(() => {
     getProducts(search);
@@ -49,10 +49,7 @@ function App() {
 
   return (
     <>
-      <Layout
-        items={routesBreadcrumb}
-        onSearch={(value) => handleChangeLanguage()}
-      >
+      <Layout items={routesBreadcrumb} onSearch={() => handleChangeLanguage()}>
         <List loading={loading} dataSource={products} />
       </Layout>
     </>
