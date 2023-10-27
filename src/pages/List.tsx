@@ -3,45 +3,61 @@ import { useTranslation } from "jhon-test-utils";
 
 import useProductsStore from "../stores/useProduct";
 import { useEffect, useState } from "react";
+import ProductsQuantity from "../components/ProductsQuantity";
+import { useNavigate, useParams } from "react-router-dom";
 
 function App() {
   const {
     t,
-    // i18n: { changeLanguage },
+    i18n: { language, changeLanguage },
   } = useTranslation();
 
-  // const [currentLanguage, setCurrentLanguage] = useState("pt-br");
+  const params = useParams();
+  const navigation = useNavigate();
 
-  // const handleChangeLanguage = () => {
-  //   const languageUri = currentLanguage === "pt-br" ? "en-us" : "pt-br";
-  //   const languageKey = currentLanguage === "pt-br" ? "enUs" : "ptBr";
+  const handleChangeLanguage = (lang: string) => {
+    const languageKey = lang === "pt-br" ? "ptBr" : "enUs";
 
-  //   setCurrentLanguage(languageUri);
-  //   changeLanguage(languageKey);
-  // };
+    changeLanguage(languageKey);
+
+    navigation(`/${lang}`);
+  };
+
+  const languagesMap: { [key: string]: string } = {
+    ptBr: "Portugues",
+    enUs: "English",
+    "pt-br": "ptBr",
+    "en-us": "enUs",
+  };
 
   const routesBreadcrumb = [
     {
-      title: t("LANGUAGE"),
+      title: `${t("LANGUAGE")}: ${languagesMap[language]}`,
       menu: {
         items: [
           {
-            title: "pt-br",
+            title: "Portugues",
+            onClick: () => handleChangeLanguage("pt-br"),
           },
           {
-            title: "en-us",
+            title: "English",
+            onClick: () => handleChangeLanguage("en-us"),
           },
         ],
       },
     },
     {
-      title: "Products",
+      title: t("PRODUCTS"),
     },
   ];
 
   const { products, loading, getProducts, pagination, setPagination } =
     useProductsStore();
   const [search, setSearch] = useState(null);
+
+  useEffect(() => {
+    changeLanguage(languagesMap[params.language]);
+  }, []);
 
   useEffect(() => {
     getProducts(search, pagination);
@@ -52,15 +68,12 @@ function App() {
       <Layout items={routesBreadcrumb} onSearch={(value) => setSearch(value)}>
         {search ? (
           <h1 style={{ color: "burlywood" }}>
-            Resultados para: <b>{search}</b>
+            {t("RESULTS_FOR")}: <b>{search}</b>
           </h1>
         ) : null}
         <List
-          header={
-            <span>
-              <b>2</b> produtos encontrados
-            </span>
-          }
+          header={<ProductsQuantity />}
+          footer={<ProductsQuantity />}
           loading={loading}
           dataSource={products}
           pagination={{
