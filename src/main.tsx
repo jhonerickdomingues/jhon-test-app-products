@@ -1,30 +1,16 @@
-declare global {
-  interface Window {
-    GLOBAL_VARIABLES: {
-      BASE_URL: string;
-      HEADERS: any;
-    };
-  }
-}
-
-window.GLOBAL_VARIABLES = {
-  BASE_URL: "https://products-test-stafanini.free.beeceptor.com",
-  HEADERS: {},
-};
-
-import App from "./App.tsx";
+import "./boot.ts";
+import List from "./pages/List.tsx";
 import ReactDOM from "react-dom/client";
-import "./style.css";
 import "antd/dist/reset.css";
-
-import { seti18n } from "jhon-test-utils";
-
-seti18n();
 import {
   createBrowserRouter,
   RouterProvider,
   redirect,
 } from "react-router-dom";
+import { seti18n } from "jhon-test-utils";
+import "./style.css";
+
+seti18n();
 
 const router = createBrowserRouter([
   {
@@ -37,7 +23,7 @@ const router = createBrowserRouter([
 
       return true;
     },
-    Component: App,
+    Component: List,
   },
   {
     path: "*",
