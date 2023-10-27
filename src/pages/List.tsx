@@ -7,18 +7,18 @@ import { useEffect, useState } from "react";
 function App() {
   const {
     t,
-    i18n: { changeLanguage },
+    // i18n: { changeLanguage },
   } = useTranslation();
 
-  const [currentLanguage, setCurrentLanguage] = useState("pt-br");
+  // const [currentLanguage, setCurrentLanguage] = useState("pt-br");
 
-  const handleChangeLanguage = () => {
-    const languageUri = currentLanguage === "pt-br" ? "en-us" : "pt-br";
-    const languageKey = currentLanguage === "pt-br" ? "enUs" : "ptBr";
+  // const handleChangeLanguage = () => {
+  //   const languageUri = currentLanguage === "pt-br" ? "en-us" : "pt-br";
+  //   const languageKey = currentLanguage === "pt-br" ? "enUs" : "ptBr";
 
-    setCurrentLanguage(languageUri);
-    changeLanguage(languageKey);
-  };
+  //   setCurrentLanguage(languageUri);
+  //   changeLanguage(languageKey);
+  // };
 
   const routesBreadcrumb = [
     {

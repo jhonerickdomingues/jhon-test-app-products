@@ -12,8 +12,8 @@ dependencies:
     specifier: ^4.18.2
     version: 4.18.2
   jhon-test-design-system:
-    specifier: ^0.0.2
-    version: 0.0.2
+    specifier: ^0.0.3
+    version: 0.0.3
   jhon-test-utils:
     specifier: ^0.0.2
     version: 0.0.2
@@ -1878,8 +1878,8 @@ packages:
     resolution: {integrity: sha512-RHxMLp9lnKHGHRng9QFhRCMbYAcVpn69smSGcq3f36xjgVVWThj4qqLbTLlq7Ssj8B+fIQ1EuCEGI2lKsyQeIw==}
     dev: true
 
-  /jhon-test-design-system@0.0.2:
-    resolution: {integrity: sha512-qudLPaKX/vOSWZEheuVGX4jrB92GrazkkjMuT5X0/Y8PDhY/nWeYXKeleTsa/VYG5EMzrqE5tBAI1pzyM8UBLA==}
+  /jhon-test-design-system@0.0.3:
+    resolution: {integrity: sha512-OpjQn+JW+oIwsPu0kelRxiShjRn7cG0hb+XnvONjMbv3NEFY7xDnZrHSF6/lQh0vM6CSvwNlqt++8/rR94zQxQ==}
     dependencies:
       antd: 5.10.2(react-dom@18.2.0)(react@18.2.0)
       jhon-test-utils: 0.0.1

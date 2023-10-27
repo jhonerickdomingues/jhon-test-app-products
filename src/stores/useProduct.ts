@@ -17,7 +17,7 @@ type Store = {
   getProducts: (search?: string | null, pagination?: PaginationType) => void;
 };
 
-const useProductsStore = create<Store>()((set, get) => ({
+const useProductsStore = create<Store>()((set) => ({
   pagination: {
     page: 1,
     pageSize: 10,
