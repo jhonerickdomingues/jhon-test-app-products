@@ -12,11 +12,11 @@ dependencies:
     specifier: ^4.18.2
     version: 4.18.2
   jhon-test-design-system:
-    specifier: ^0.0.3
-    version: 0.0.3
+    specifier: ^0.0.5
+    version: 0.0.5
   jhon-test-utils:
-    specifier: ^0.0.2
-    version: 0.0.2
+    specifier: ^0.0.4
+    version: 0.0.4
   react:
     specifier: ^18.2.0
     version: 18.2.0
@@ -1878,11 +1878,11 @@ packages:
     resolution: {integrity: sha512-RHxMLp9lnKHGHRng9QFhRCMbYAcVpn69smSGcq3f36xjgVVWThj4qqLbTLlq7Ssj8B+fIQ1EuCEGI2lKsyQeIw==}
     dev: true
 
-  /jhon-test-design-system@0.0.3:
-    resolution: {integrity: sha512-OpjQn+JW+oIwsPu0kelRxiShjRn7cG0hb+XnvONjMbv3NEFY7xDnZrHSF6/lQh0vM6CSvwNlqt++8/rR94zQxQ==}
+  /jhon-test-design-system@0.0.5:
+    resolution: {integrity: sha512-PQXKLlz/q9toCHzBEgfT6dMW5L9ad8WW+05N4BQnG0Us0GbrGVnAPL/mwTDW8s7H7IpNmLQZSomr1SZzwqIm/w==}
     dependencies:
       antd: 5.10.2(react-dom@18.2.0)(react@18.2.0)
-      jhon-test-utils: 0.0.1
+      jhon-test-utils: 0.0.4
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
     transitivePeerDependencies:
@@ -1893,21 +1893,8 @@ packages:
       - react-native
     dev: false
 
-  /jhon-test-utils@0.0.1:
-    resolution: {integrity: sha512-dIaqe2mAJUrQ7dAd7cSMT9zLdTYW9J3cbOXncmUhp+HJMBncd1hUefYo1fbzDhpiboo0TXtKTanBOutZxlHo3g==}
-    dependencies:
-      axios: 1.5.1
-      i18next: 23.6.0
-      react: 18.2.0
-      react-dom: 18.2.0(react@18.2.0)
-      react-i18next: 13.3.1(i18next@23.6.0)(react-dom@18.2.0)(react@18.2.0)
-    transitivePeerDependencies:
-      - debug
-      - react-native
-    dev: false
-
-  /jhon-test-utils@0.0.2:
-    resolution: {integrity: sha512-ZJprQ/1FYhWqOKK2HXFVpN43xpsPFbv2sTPGZEQhJUVO4SIT4FWtH45Vf2MQ0tRdMYONGzy3dTFf2CputOoJhA==}
+  /jhon-test-utils@0.0.4:
+    resolution: {integrity: sha512-WPeJ3vdD2DZrdgOQGzJFUgAQQdrvuWJ7KlCqxjGAUMXSgeijV6AmWT6pN8Q0TidAoRZWsZE7aDyxFLrX7TUXdA==}
     dependencies:
       axios: 1.5.1
       i18next: 23.6.0
