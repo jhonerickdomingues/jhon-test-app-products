@@ -56,7 +56,7 @@ function App() {
   const [search, setSearch] = useState(null);
 
   useEffect(() => {
-    changeLanguage(languagesMap[params.language]);
+    if (params.language) changeLanguage(languagesMap[params.language]);
   }, []);
 
   useEffect(() => {
