@@ -10,7 +10,7 @@ Para esse teste, fiz o aplicativo web principal consumir duas dependencias (libs
 
 #### Abaixo segue uma imagem da arquitetura:
 
-![App Screenshot](https://uploaddeimagens.com.br/images/004/649/918/full/arquitetura.jpeg?1698442811)
+![App Screenshot](https://uploaddeimagens.com.br/images/004/649/952/original/Diagrama_sem_nome.drawio.png?1698444190)
 
 ## Instalação
 
