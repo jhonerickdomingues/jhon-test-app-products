@@ -1,27 +1,39 @@
-# React + TypeScript + Vite
+# Aplicação teste de produtos
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Loja de produtos.
 
-Currently, two official plugins are available:
+Para esse teste, fiz o aplicativo web principal consumir duas dependencias (libs) que criei, que estão devidamente listadas no package.json, essas libs são:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+**design system:** [repositório github](https://github.com/jhonerickdomingues/jhon-test-design-system) | [lib npm](https://www.npmjs.com/package/jhon-test-design-system) | [Storybook components](http://jhon-test-design-system.jhonerick.me/?path=/docs/ds-layout--docs)
 
-## Expanding the ESLint configuration
+**utils:** [repositório github](https://github.com/jhonerickdomingues/jhon-test-utils) | [lib npm](https://www.npmjs.com/package/jhon-test-utils)
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+#### Abaixo segue uma imagem da arquitetura:
 
-- Configure the top-level `parserOptions` property like this:
+![App Screenshot](https://uploaddeimagens.com.br/images/004/649/918/full/arquitetura.jpeg?1698442811)
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
+## Instalação
+
+Instale as dependencias
+
+```bash
+  npm install
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+Crie um arquivo chamado ".env" com conteudo de ".env.example" e altere se quiser:
+
+```bash
+  cp .env.example .env
+```
+
+Rode o projeto
+
+```bash
+  npm run dev
+```
+
+## Exemplos:
+
+- [Aplicação Front online](http://jhon-test-app-products.jhonerick.me)
+- [Aplicação Back online](http://jhon-test-api-products.jhonerick.me)
+- [Storybook components](http://jhon-test-design-system.jhonerick.me/?path=/docs/ds-layout--docs)
